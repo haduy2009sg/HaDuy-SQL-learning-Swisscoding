@@ -6,11 +6,15 @@
 Nó chắc là không có gì đặc biệt và không khó đâu nhỉ.
 😝😝😝😝😝
 💌💌💌💌💌
+
 Tôi thử lấy 10 row theo như part 2 3.3 thì nó vầy nè. 😄
-Câu lệnh:
+
+**Câu lệnh:**
+
 SELECT * FROM club_member_info
 LIMIT 10
-Kết quả:
+
+**Kết quả:**
 |full_name|age|martial_status|email|phone|full_address|job_title|membership_date|
 |---------|---|--------------|-----|-----|------------|---------|---------------|
 |addie lush|40|married|alush0@shutterfly.com|254-389-8708|3226 Eastlawn Pass,Temple,Texas|Assistant Professor|7/31/2013|
