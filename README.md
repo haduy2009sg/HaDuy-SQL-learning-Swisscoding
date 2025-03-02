@@ -30,7 +30,7 @@ LIMIT 10
 | fey kloss|52|married|fkloss9@godaddy.com|808-177-0318|8976 Jackson Park,Honolulu,Hawaii|Chemical Engineer|11/5/2014|
 
 **Part 3_3.3**
-```
+```SQL
 -- club_member_info definition
 
 CREATE TABLE club_member_info (
@@ -46,7 +46,18 @@ CREATE TABLE club_member_info (
 ```
 
 Copy all values from original table
-```
+```SQL
 INSERT INTO club_member_info_cleaned
 SELECT * FROM club_member_info;
+```
+Loại bỏ khoản trắng và in hoa không nhất quán
+```SQL
+UPDATE club_member_info_cleaned
+SET full_name = TRIM(LOWER(full_name));
+```
+Điều chỉnh tuổi_age ( thay các giá trị empty và tuổi lớn hơn 100 )
+```SQL
+UPDATE club_member_info_cleaned 
+SET age = (SELECT AVG(age) FROM club_member_info_cleaned )
+WHERE age > 100 OR age IS NULL;
 ```
